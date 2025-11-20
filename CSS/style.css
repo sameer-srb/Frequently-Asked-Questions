@@ -12,6 +12,7 @@ body {
   height: 100vh; /* Full height of the viewport */
   background-color: #ffffff;
   font-family: "Inter", sans-serif; /* Google font */
+  letter-spacing: -0.01rem;
 }
 
 /* ------------------- Typography ------------------- */
