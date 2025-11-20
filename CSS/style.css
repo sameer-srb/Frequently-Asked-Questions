@@ -1,5 +1,7 @@
 /* ------------------- Reset Styles ------------------- */
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,7 +12,6 @@ body {
   height: 100vh; /* Full height of the viewport */
   background-color: #ffffff;
   font-family: "Inter", sans-serif; /* Google font */
-  letter-spacing: calc(-0.01 * 1em);
 }
 
 /* ------------------- Typography ------------------- */
@@ -18,13 +19,13 @@ h1,
 h2,
 p,
 strong {
-  color: #030616; 
+  color: #030616;
 }
 
 h1 {
   font-size: 2.25rem;
-  font-weight: 600; 
-  margin-bottom: 1rem; 
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 h2 {
@@ -37,94 +38,75 @@ h2 {
 li,
 p {
   font-size: 1rem;
-  font-weight: 400; 
+  font-weight: 400;
 }
 
 /* ------------------- Layout ------------------- */
 header {
-  padding: 4.5rem 1.5rem; 
+  padding: 4.5rem 1.5rem;
 }
 
 .faq-header {
-  text-align: center; 
+  text-align: center;
 }
 
 main {
   padding: 4.5rem 1.5rem;
-  background-color: #f8fafc; 
+  background-color: #f8fafc;
 }
 
 .faq-container {
-  width: 40rem; 
-  margin: 0 auto; 
-}
-
-/* Spacing between FAQ items */
-.faq-item:first-child {
-  margin-bottom: 2.5rem;
-}
-
-.faq-item:last-child {
-  margin-top: 2.5rem;
-}
-
-/* Add spacing between paragraphs/lists inside answers */
-.faq-answer > * + * {
-  margin-top: 1.5rem;
+  width: 40rem;
+  margin: 0 auto;
 }
 
 /* ------------------- Lists ------------------- */
 li {
-  line-height: 2rem; 
+  line-height: 2rem;
 }
 
 ul,
 ol {
-  padding-left: 1rem; 
+  padding-left: 1rem;
+  margin: 1.5rem;
 }
 
 /* ------------------- Links ------------------- */
 a {
-  text-decoration: none; 
-  color: #4e80ee; 
+  text-decoration: none;
+  color: #4e80ee;
 }
 
 /* ------------------- Divider ------------------- */
 .divider {
-  width: 671px; 
-  border: 1px solid #d2d5da; 
+  width: 671px;
+  border: 1px solid #d2d5da;
   height: 0px;
+  margin: 2.5rem 0;
 }
 
 /* ------------------- Mobile Styles -------------------
    Applied when screen width is 640px or smaller
 -------------------------------------------------------- */
 @media (max-width: 480px) {
- 
+  body {
+    width: 412px;
+  }
   header {
-    padding: 4.5rem 0; 
+    padding: 4.5rem 0;
   }
 
   .faq-header {
-    padding: 0 1.5rem; 
+    padding: 0 1.5rem;
   }
 
   main {
-    padding: 4.5rem 0.75rem; 
+    padding: 4.5rem 0.75rem;
   }
 
   .faq-container {
-    padding: 0 1.5rem; 
-    width: 100%; 
-  }
-
-  /* Reduce spacing between FAQ items */
-  .faq-item:first-child {
-    margin-bottom: 1.5rem;
-  }
-
-  .faq-item:last-child {
-    margin-top: 1.5rem;
+    padding: 0 1.5rem;
+    width: 100%;
   }
 
   /* Make divider full width on mobile */
@@ -133,7 +115,5 @@ a {
   }
 }
 
-
-@media (max-width: 768px){
-
+@media (max-width: 768px) {
 }
